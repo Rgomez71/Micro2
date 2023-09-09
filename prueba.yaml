@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: prueba-pod
+spec:
+  containers:
+  - name: prueba-container
+    image: rgomez71/mi-kubernete:v1.0

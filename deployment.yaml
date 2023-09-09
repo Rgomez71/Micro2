@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-kubernetes-app
+spec:
+  replicas: 3 # Puedes ajustar el número de réplicas según tus necesidades
+  selector:
+    matchLabels:
+      app: mi-kubernetes-app
+  template:
+    metadata:
+      labels:
+        app: mi-kubernetes-app
+    spec:
+      containers:
+      - name: mi-kubernetes-container
+        image: rgomez71/mi-kubernete:v1.0
+        ports:
+        - containerPort: 80 # El puerto en el que escucha tu aplicación dentro del contenedor
